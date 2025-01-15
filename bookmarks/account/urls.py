@@ -24,6 +24,12 @@ urlpatterns = [
     # Управление аккаунтов (вход, выход, сброс/смена пароля)
     path('', include('django.contrib.auth.urls')),
 
+    # Регистрация
+    path('register/', views.register, name='register'),
+
+    # Редактирование созданного профиля
+    path('edit/', views.edit, name='edit'),
+
     # Главная страница
     path('', views.dashboard, name='dashboard'),
 ]
